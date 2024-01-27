@@ -1,0 +1,26 @@
+# Ignore local environment files
+.env
+alembic.ini
+
+# Ignore database migration files
+# alembic/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore editor-specific files and directories
+.vscode/
+
+# Ignore system and temporary files
+*.pyc
+.DS_Store
+*.DS_Store
+Thumbs.db
+
+# Ignore logs and other generated files
+*.log
+
+venv

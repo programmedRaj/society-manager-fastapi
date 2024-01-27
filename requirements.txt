@@ -1,0 +1,9 @@
+fastapi
+sqlalchemy
+alembic
+mysql-connector-python
+uvicorn
+pytest
+httpx
+python-jose
+python-dotenv
