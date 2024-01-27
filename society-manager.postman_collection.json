@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "7c749d34-d860-4c6e-a572-1444c146d973",
+		"name": "society-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11919513"
+	},
+	"item": [
+		{
+			"name": "refresh access_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaiIsImNvbnRhY3QiOiI5ODkyODg5MTcyIiwicGVybWlzc2lvbnMiOlsiV1JJVEUiXSwiZXhwIjoxNzA3NzIzMzY4fQ.51lmF9oFQ8XkUaOSvSZuwBqpPrvHJkxMmnLoLCUuO0I\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/refresh-access-token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"refresh-access-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_tokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"raj\", \"phone_number\":\"9892889172\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYWoiLCJjb250YWN0IjoiOTg5Mjg4OTE3MiIsInBlcm1pc3Npb25zIjpbIldSSVRFIl0sImV4cCI6MTcwNTEzMjA1MX0.dd1P1WpancRvttoGQAs7JGT8yBP-xM1ld2x5aM6b1Uw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYWoiLCJjb250YWN0IjoiOTg5Mjg4OTE3MiIsInBlcm1pc3Npb25zIjpbIldSSVRFIl0sImV4cCI6MTcwNTEzMjA1MX0.dd1P1WpancRvttoGQAs7JGT8yBP-xM1ld2x5aM6b1Uw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/verify-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"verify-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revoke-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/revoke-token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaiIsImV4cCI6MTcwNzcyMDA4Mn0.47v8VBcV27a33qJr-loaktTsGs5z3wYfIUX2smg4DDs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"revoke-token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaiIsImV4cCI6MTcwNzcyMDA4Mn0.47v8VBcV27a33qJr-loaktTsGs5z3wYfIUX2smg4DDs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone\": \"1111111111\",\r\n  \"user_type\": \"user\",\r\n  \"device_token\": \"sdsd\",\r\n  \"name\": \"tessdsdt\",\r\n  \"on_duty\": true,\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

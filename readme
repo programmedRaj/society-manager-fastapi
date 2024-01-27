@@ -1,11 +1,13 @@
-`python venv -m venv`    # create virtual environment.
+# create virtual environment. `python venv -m venv`    
 
-`pip install -r requirements.txt`  #install dependencies.
+# install dependencies. `pip install -r requirements.txt`  
 
-#To configure your database, create a `.env` file and use `env_demo` as a reference.
+# To configure your database, create a `.env` file and use `env_demo` as a reference.
 
-#To configure your alembic setup, create a `alembic.ini` file and use `alembic_demo.ini` as a reference.
+# To configure your alembic setup, create a `alembic.ini` file and use `alembic_demo.ini` as a reference.
 
 `alembic init <directory_name>` # initialize alembic for db migrations. `alembicmigrations` in this example.
 
 # to run app: uvicorn main:app --reload
+
+# use /docs# for OpenAPI interface to test endpoints alternatively added Postman Collection
